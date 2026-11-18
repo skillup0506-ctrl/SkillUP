@@ -1,0 +1,285 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom sleek modern scrollbar without chunky OS arrows or jagged cuts */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.28);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+  background-clip: content-box;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+  background-clip: content-box;
+}
+
+@layer utilities {
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    .print-only {
+      display: block !important;
+    }
+  }
+}
+
+@keyframes python-float-alive {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    filter: drop-shadow(0 10px 16px rgba(56, 189, 248, 0.35)) drop-shadow(0 4px 10px rgba(245, 158, 11, 0.25));
+  }
+  25% {
+    transform: translateY(-8px) rotate(-3.5deg) scale(1.04);
+    filter: drop-shadow(0 14px 22px rgba(56, 189, 248, 0.55)) drop-shadow(0 6px 14px rgba(245, 158, 11, 0.35));
+  }
+  50% {
+    transform: translateY(-13px) rotate(2.5deg) scale(1.02);
+    filter: drop-shadow(0 16px 26px rgba(56, 189, 248, 0.45)) drop-shadow(0 8px 18px rgba(245, 158, 11, 0.45));
+  }
+  75% {
+    transform: translateY(-6px) rotate(-1.5deg) scale(1.05);
+    filter: drop-shadow(0 12px 20px rgba(56, 189, 248, 0.45)) drop-shadow(0 5px 12px rgba(245, 158, 11, 0.3));
+  }
+}
+
+@keyframes python-glow-breathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes python-twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25) rotate(45deg);
+  }
+}
+
+.animate-python-alive {
+  animation: python-float-alive 3.4s ease-in-out infinite;
+}
+
+.animate-python-glow {
+  animation: python-glow-breathe 2.6s ease-in-out infinite;
+}
+
+.animate-python-twinkle {
+  animation: python-twinkle 1.8s ease-in-out infinite;
+}
+
+@keyframes mysql-float-alive {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    filter: drop-shadow(0 10px 18px rgba(0, 117, 143, 0.4)) drop-shadow(0 4px 10px rgba(242, 145, 17, 0.3));
+  }
+  30% {
+    transform: translateY(-9px) rotate(3deg) scale(1.05);
+    filter: drop-shadow(0 14px 24px rgba(0, 117, 143, 0.6)) drop-shadow(0 6px 14px rgba(242, 145, 17, 0.45));
+  }
+  60% {
+    transform: translateY(-13px) rotate(-2deg) scale(1.02);
+    filter: drop-shadow(0 16px 28px rgba(0, 117, 143, 0.5)) drop-shadow(0 8px 18px rgba(242, 145, 17, 0.5));
+  }
+  85% {
+    transform: translateY(-5px) rotate(1.5deg) scale(1.03);
+    filter: drop-shadow(0 12px 20px rgba(0, 117, 143, 0.45)) drop-shadow(0 5px 12px rgba(242, 145, 17, 0.35));
+  }
+}
+
+@keyframes mysql-glow-breathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.22);
+  }
+}
+
+@keyframes mysql-twinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(60deg);
+  }
+}
+
+.animate-mysql-alive {
+  animation: mysql-float-alive 3.8s ease-in-out infinite;
+  animation-delay: -1.2s; /* Desynchronized from Python for lively natural harmony */
+}
+
+.animate-mysql-glow {
+  animation: mysql-glow-breathe 2.9s ease-in-out infinite;
+  animation-delay: -0.7s;
+}
+
+.animate-mysql-twinkle {
+  animation: mysql-twinkle 2.1s ease-in-out infinite;
+}
+
+@keyframes react-float-alive {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    filter: drop-shadow(0 10px 18px rgba(0, 216, 255, 0.45)) drop-shadow(0 4px 10px rgba(56, 189, 248, 0.3));
+  }
+  30% {
+    transform: translateY(-8px) rotate(-4deg) scale(1.06);
+    filter: drop-shadow(0 14px 24px rgba(0, 216, 255, 0.65)) drop-shadow(0 6px 14px rgba(56, 189, 248, 0.45));
+  }
+  60% {
+    transform: translateY(-13px) rotate(3deg) scale(1.02);
+    filter: drop-shadow(0 16px 28px rgba(0, 216, 255, 0.55)) drop-shadow(0 8px 18px rgba(56, 189, 248, 0.5));
+  }
+  85% {
+    transform: translateY(-4px) rotate(-1.5deg) scale(1.04);
+    filter: drop-shadow(0 12px 20px rgba(0, 216, 255, 0.5)) drop-shadow(0 5px 12px rgba(56, 189, 248, 0.35));
+  }
+}
+
+@keyframes react-spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes react-glow-breathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.25);
+  }
+}
+
+@keyframes react-twinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(90deg);
+  }
+}
+
+.animate-react-alive {
+  animation: react-float-alive 3.6s ease-in-out infinite;
+  animation-delay: -2.2s; /* Desynchronized from Python and MySQL for natural organic triad motion! */
+}
+
+.animate-react-spin {
+  animation: react-spin-slow 16s linear infinite;
+}
+
+.animate-react-glow {
+  animation: react-glow-breathe 2.5s ease-in-out infinite;
+  animation-delay: -1.3s;
+}
+
+.animate-react-twinkle {
+  animation: react-twinkle 1.9s ease-in-out infinite;
+}
+
+@keyframes chart-float-alive {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    filter: drop-shadow(0 10px 18px rgba(6, 182, 212, 0.45)) drop-shadow(0 4px 10px rgba(37, 99, 235, 0.3));
+  }
+  30% {
+    transform: translateY(-9px) rotate(3deg) scale(1.05);
+    filter: drop-shadow(0 14px 24px rgba(6, 182, 212, 0.65)) drop-shadow(0 6px 14px rgba(37, 99, 235, 0.45));
+  }
+  60% {
+    transform: translateY(-14px) rotate(-2.5deg) scale(1.02);
+    filter: drop-shadow(0 16px 28px rgba(6, 182, 212, 0.55)) drop-shadow(0 8px 18px rgba(37, 99, 235, 0.5));
+  }
+  85% {
+    transform: translateY(-5px) rotate(1.5deg) scale(1.03);
+    filter: drop-shadow(0 12px 20px rgba(6, 182, 212, 0.5)) drop-shadow(0 5px 12px rgba(37, 99, 235, 0.35));
+  }
+}
+
+@keyframes chart-glow-breathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.22);
+  }
+}
+
+@keyframes chart-bar-undulate {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.18);
+  }
+}
+
+.animate-chart-alive {
+  animation: chart-float-alive 3.5s ease-in-out infinite;
+  animation-delay: -0.6s;
+}
+
+.animate-chart-glow {
+  animation: chart-glow-breathe 2.7s ease-in-out infinite;
+  animation-delay: -1.8s;
+}
+
+.animate-chart-bars {
+  animation: chart-bar-undulate 2.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+
+
+

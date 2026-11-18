@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <defs>
+    <linearGradient id="pyBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="pyYellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="pyGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Top Blue Snake with sleek shading -->
+  <path
+    fill="url(#pyBlueGrad)"
+    d="M63.5 12.3c-23.7 0-22.2 10.3-22.2 10.3l.1 10.7h22.6v3.2H32.6S17 34.7 17 58.4c0 23.6 13.6 22.8 13.6 22.8h8.1v-11.4s-.4-13.6 13.3-13.6h22.8s12.9.2 12.9-12.6V25.2s1.8-12.9-24.2-12.9z"
+  />
+  <!-- Top Blue Snake Eye (Light Cyan / White reflection) -->
+  <circle cx="50.2" cy="23.6" r="4.2" fill="#FFFFFF"/>
+  <circle cx="50.2" cy="23.6" r="2.2" fill="#0F172A"/>
+
+  <!-- Bottom Yellow Snake with sleek shading -->
+  <path
+    fill="url(#pyYellowGrad)"
+    d="M64.5 115.7c23.7 0 22.2-10.3 22.2-10.3l-.1-10.7H64v-3.2h31.4s15.6 1.8 15.6-21.9c0-23.6-13.6-22.8-13.6-22.8h-8.1v11.4s.4 13.6-13.3 13.6H53.2s-12.9-.2-12.9 12.6v19.8s-1.8 12.9 24.2 12.9z"
+  />
+  <!-- Bottom Yellow Snake Eye (Warm Amber / White reflection) -->
+  <circle cx="77.8" cy="104.4" r="4.2" fill="#FFFFFF"/>
+  <circle cx="77.8" cy="104.4" r="2.2" fill="#0F172A"/>
+
+  <!-- Subtle glossy highlights -->
+  <path
+    d="M63 15c-15 0-18 6-18 10l.1 4h18v-4s1-10 18-10H63z"
+    fill="#FFFFFF"
+    opacity="0.25"
+  />
+  <path
+    d="M65 113c15 0 18-6 18-10l-.1-4H65v4s-1 10-18 10h18z"
+    fill="#FFFFFF"
+    opacity="0.3"
+  />
+</svg>
